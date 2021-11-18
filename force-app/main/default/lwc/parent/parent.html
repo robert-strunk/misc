@@ -1,0 +1,42 @@
+<template>
+
+
+
+    <lightning-layout>
+        <lightning-layout-item size="6">
+
+
+
+            <div>Parent Component</div>
+            <table>
+                <thead>
+                    <th>primitiveVar</th>
+                    <th>objVar.innerObj.prop</th>
+                </thead>
+                <tbody>
+                    <td>{primitiveVar}</td>
+                    <td>{objVar.innerObj.prop}</td>
+                </tbody>
+            </table>
+            
+            
+
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+
+
+
+
+            <c-child        
+                primitive-var={primitiveVar}
+                obj={objVar}>
+            </c-child>
+
+
+
+
+        </lightning-layout-item>
+    </lightning-layout>  
+
+    <lightning-button onclick={handleClick} label="Increment parent props"></lightning-button>
+</template>
